@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infopark - Jesus Youth</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-left">
+      <img src="jylogo.png" alt="Logo" class="logo"> <!-- Replace with actual logo URL -->
+      <h1>Jesus Youth <span class="highlight">Infopark</span></h1>
+    </div>
+    <nav class="nav-menu">
+      <a href="#home" id="home" class="menuActive">Home</a>
+      <a href="#blog" id="blog">Blog</a>
+      <a href="#gallery" id="gallery">Gallery</a>
+      <a href="#about" id="about">About Us</a>
+      <a href="#contact" id="contact">Contact Us</a>
+    </nav>
+  </header>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="jylogo.png" height="476px" width="429px">
+      <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="rosary.jpg" height="476px" width="429px">
+      <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="Bible.jpg" height="476px" width="429px">
+      <div class="text">Caption Three</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  </main>
+  <section class="aboutUs">
+    <h2>About Us</h2>
+    <p>Jesus Youth is a global Catholic movement rooted in charismatic spirituality. Originating in Kerala, India, it
+      has expanded its reach to encompass nearly 30 countries across the globe. Jesus Youth is a global Catholic
+      movement rooted in charismatic spirituality...</p>
+  </section>
+</body>
+<script src="main.js"></script>
+</html>
