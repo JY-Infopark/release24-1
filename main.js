@@ -47,3 +47,8 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+// Set the interval for automatic sliding
+setInterval(() => {
+    plusSlides(1); // Move to the next slide
+}, 3000); // Change slide every 3 seconds (3000 ms)
