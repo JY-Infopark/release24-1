@@ -12,6 +12,10 @@ function setActiveLink(event) {
         // Scroll smoothly to the .about us section
         document.querySelector('.aboutUs').scrollIntoView({ behavior: 'smooth' });
     }
+    if (event.target.id === 'contact') {
+        // Scroll smoothly to the .footer section
+        document.querySelector('.footer').scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 // Add event listeners to all nav links
