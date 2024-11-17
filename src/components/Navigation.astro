@@ -1,0 +1,21 @@
+---
+const navItems = [
+  { href: '/', text: 'HOME' },
+  { href: '/blog', text: 'BLOG' },
+  { href: '/gallery', text: 'GALLERY' },
+  { href: '/about', text: 'ABOUT US' },
+  { href: '/contact', text: 'CONTACT US' }
+];
+---
+
+<nav class="fixed top-0 right-0 p-4 z-50">
+  <ul class="flex gap-6">
+    {navItems.map(item => (
+      <li>
+        <a href={item.href} class="text-sm font-medium hover:text-primary transition-colors">
+          {item.text}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

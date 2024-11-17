@@ -1,0 +1,22 @@
+---
+interface Props {
+  image: string;
+  className?: string;
+}
+
+const { image, className = "" } = Astro.props;
+---
+
+<div class={`gallery-image ${className}`}>
+  <img src={image} alt="Gallery" class="w-full h-full object-cover rounded-lg" />
+</div>
+
+<style>
+  .gallery-image {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .gallery-image:hover {
+    transform: scale(1.05);
+  }
+</style>

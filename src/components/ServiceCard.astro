@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  image: string;
+}
+
+const { title, image } = Astro.props;
+---
+
+<div class="service-card">
+  <img src={image} alt={title} class="w-full h-64 object-cover mb-4 rounded-lg" />
+  <h3 class="text-xl font-bold">{title}</h3>
+</div>
+
+<style>
+  .service-card {
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+</style>

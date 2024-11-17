@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GalleryImage from '../components/GalleryImage.astro';
+---
+
+<Layout title="Gallery | Jesus Youth">
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <h1 class="text-6xl font-bold mb-12">GALLERY</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <GalleryImage image="/images/gallery1.jpg" />
+        <GalleryImage image="/images/gallery2.jpg" className="md:col-span-2" />
+        <GalleryImage image="/images/gallery3.jpg" />
+        <GalleryImage image="/images/gallery4.jpg" />
+        <GalleryImage image="/images/gallery5.jpg" />
+      </div>
+    </div>
+  </section>
+</Layout>

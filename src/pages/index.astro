@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import NextMeet from '../components/NextMeet.astro';
+import Services from '../components/Services.astro';
+import Footer from '../components/Footer.astro';
+
+const nextMeetDate = {
+  date: '24',
+  month: 'OCT'
+};
+---
+
+<Layout title="Jesus Youth Infopark">
+  <Navigation />
+  <NextMeet date={nextMeetDate.date} month={nextMeetDate.month} />
+  
+  <main>
+    <section class="min-h-screen flex items-center justify-center relative bg-white">
+      <div class="text-center px-4">
+        <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-8 text-gray-900">
+          WE ARE<br />
+          ONE FAMILY.
+        </h1>
+        <img 
+          src="/images/hero.jpg" 
+          alt="Community" 
+          class="mx-auto rounded-lg shadow-xl max-w-2xl w-full"
+          loading="eager"
+        />
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-6xl font-bold mb-8">WE ARE THE<br />JESUS YOUTH</h2>
+        <p class="text-xl text-gray-600 max-w-4xl">
+          Jesus Youth is a global Catholic movement rooted in charismatic spirituality. Originating in Kerala, India, it
+          has expanded its reach to encompass nearly 30 countries across the globe. Jesus Youth is a global
+          Catholic movement rooted in charismatic spirituality.
+        </p>
+      </div>
+    </section>
+
+    <Services />
+
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-6xl font-bold mb-8">PROFESSIONAL<br />MINISTRY</h2>
+        <p class="text-xl text-gray-600 max-w-4xl">
+          Jesus Youth is a global Catholic movement rooted in charismatic spirituality. Originating in Kerala, India, it
+          has expanded its reach to encompass nearly 30 countries across the globe.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

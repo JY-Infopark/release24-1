@@ -1,0 +1,9 @@
+---
+const { date, month } = Astro.props;
+---
+
+<div class="fixed right-4 top-1/2 transform -translate-y-1/2 bg-primary text-white p-4 rounded-lg z-40">
+  <h3 class="text-lg font-bold">NEXT MEET</h3>
+  <div class="text-2xl font-bold">{date}</div>
+  <div class="uppercase">{month}</div>
+</div>

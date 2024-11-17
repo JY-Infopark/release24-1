@@ -1,0 +1,41 @@
+---
+---
+
+<div id="pwa-install" class="hidden fixed bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg z-50">
+  <p class="mb-2">Install Jesus Youth app for a better experience</p>
+  <button
+    id="install-button"
+    class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90"
+  >
+    Install App
+  </button>
+  <button
+    id="close-button"
+    class="ml-2 text-gray-500 hover:text-gray-700"
+  >
+    ✕
+  </button>
+</div>
+
+<script>
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  const pwaInstall = document.getElementById('pwa-install');
+  if (pwaInstall) pwaInstall.classList.remove('hidden');
+});
+
+document.getElementById('install-button')?.addEventListener('click', async () => {
+  if (!deferredPrompt) return;
+  deferredPrompt.prompt();
+  const { outcome } = await deferredPrompt.userChoice;
+  deferredPrompt = null;
+  document.getElementById('pwa-install')?.classList.add('hidden');
+});
+
+document.getElementById('close-button')?.addEventListener('click', () => {
+  document.getElementById('pwa-install')?.classList.add('hidden');
+});
+</script>
