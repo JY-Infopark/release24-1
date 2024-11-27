@@ -23,6 +23,10 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', setActiveLink);
 });
 
+document.getElementById("menu-toggle").addEventListener("click", function () {
+    const menuContent = document.getElementById("menu-content");
+    menuContent.classList.toggle("hidden");
+  });
 
 // js for slideshow
 let slideIndex = 1;
