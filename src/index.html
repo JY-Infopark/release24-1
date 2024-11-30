@@ -8,81 +8,37 @@
     <link rel="icon" href="/assets/common/jylogo.png" type="image/icon type" />
   </head>
 
-  <body class="flex-co bg-gray-50 text-gray-900 font-sans">
-    <div
-      class="flex max-w-full items-center justify-between py-4 bg-white shadow-md"
-    >
-      <div class="flex items-center space-x-4 relative">
-        <div class="relative w-[39vw] max-w-[20%] h-5rem bg-gray-200 px-1 py-5">
-          <img
-            src="/assets/common/jylogo.png"
-            alt="Logo"
-            class="absolute right-0 transform -translate-y-1/2 w-10 h-10 py-1 px-1 rounded-full"
-          />
+  <body class="flex-col bg-gray-50 text-gray-900 font-sans">
+    <div id="thenavdiv" class="flex max-w-full items-center justify-between py-4 bg-white shadow-md">
+      <div class="flex items-center space-x-4">
+        <div id="logosbox" class="flex justify-end relative items-center w-[5rem] md:w-[10rem] h-5 bg-gray-200 px-1 py-5">
+          <img src="/assets/common/jylogo.png" alt="Logo" class="transform w-10 h-10 py-1 px-1 rounded-full" />
         </div>
-        <div class="flex flex-col md:flex-row">
-          <header class="text-sm md:text-3xl md:leading-10 font-bold text-black md:pr-3">
-            Jesus Youth
-          </header>
-          <h2 class="text-xl md:text-4xl font-bold text-purple-600">
-            INFOPARK
-          </h2>
+        <div class="flex flex-col md:flex-row items-center justify-center">
+          <header class="text-center text-sm md:text-4xl md:leading-10 md:items-start font-bold text-black md:pr-3">Jesus Youth</header>
+          <h2 class="text-center text-xl md:text-4xl font-bold text-purple-600">INFOPARK</h2>
         </div>
       </div>
 
-      <nav class="relative">
+      <nav>
         <!-- Mobile Menu Button -->
-        <button
-          id="menu-toggle"
-          class="lg:hidden text-gray-700 mx-3 focus:outline-none"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
+        <button id="menu-toggle" class="lg:hidden text-gray-700 mx-3 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
         </button>
 
         <!-- Shared Navigation -->
         <div
           id="menu-content"
-          class="none lg:flex flex-col lg:flex-row lg:space-x-4 absolute lg:relative top-full left-0 md:w-screen lg:w-auto bg-white shadow-md lg:shadow-none"
-        >
+          class="lg:flex lg:flex-row lg:space-x-5 lg:relative lg:w-auto lg:pr-3 absolute flex-col font-bold whitespace-nowrap hidden">
           <a href="#home" class="menu-item">Home</a>
-          <a href="#blog" class="menu-item">Blog</a>
+          <a href="#about" class=" menu-item">About Us</a>
+          <a href="#initiatives" class="menu-item">Initiatives</a>
           <a href="#gallery" class="menu-item">Gallery</a>
-          <a href="#about" class="whitespace-nowrap menu-item">About Us</a>
           <a href="#contact" class="whitespace-nowrap menu-item">Contact Us</a>
         </div>
       </nav>
-
-      <style>
-        .menu-item {
-          font-size: 1rem; /* Tailwind equivalent of text-sm */
-          font-weight: 500; /* Tailwind equivalent of font-medium */
-          color: #4b5563; /* Tailwind equivalent of text-gray-700 */
-          padding: 0.5; /* Adds spacing */
-          display: block;
-          transition: color 0.2s;
-        }
-        .menu-item:hover {
-          color: #3b82f6; /* Tailwind equivalent of text-blue-500 */
-        }
-        @media (max-width: 1023px) {
-          .none {
-            display: none;
-          }
-        }
-      </style>
     </div>
 
     <!-- Hero Section -->
@@ -97,17 +53,12 @@
     <main class="px-10 py-16 space-y-16">
       <!-- Introduction -->
       <section id="about" class="text-center">
-        <h2 class="text-4xl font-extrabold uppercase">
-          We Are The Jesus Youth
-        </h2>
+        <h2 class="text-4xl font-extrabold uppercase">We Are The Jesus Youth</h2>
         <p class="mt-6 text-gray-600 leading-relaxed max-w-3xl mx-auto">
-          Jesus Youth is a global Catholic movement rooted in charismatic
-          spirituality. Originating in Kerala, India, it has expanded its reach
-          to encompass nearly 30 countries across the globe...
+          Jesus Youth is a global Catholic movement rooted in charismatic spirituality. Originating in Kerala, India, it has expanded its
+          reach to encompass nearly 30 countries across the globe...
         </p>
-        <div
-          class="mt-10 inline-block bg-blue-500 text-white font-semibold py-3 px-6 rounded shadow-lg hover:bg-blue-600"
-        >
+        <div class="mt-10 inline-block bg-blue-500 text-white font-semibold py-3 px-6 rounded shadow-lg hover:bg-blue-600">
           Next Meet - 24 Oct
         </div>
       </section>
@@ -115,31 +66,19 @@
       <!-- Services Section -->
       <section id="services" class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src="service1.jpg"
-            alt="Wednesday Gathering"
-            class="h-48 w-full object-cover"
-          />
+          <img src="service1.jpg" alt="Wednesday Gathering" class="h-48 w-full object-cover" />
           <div class="p-6">
             <h3 class="font-bold text-lg">Wednesday Gathering</h3>
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src="service2.jpg"
-            alt="Holy Mass & Confession"
-            class="h-48 w-full object-cover"
-          />
+          <img src="service2.jpg" alt="Holy Mass & Confession" class="h-48 w-full object-cover" />
           <div class="p-6">
             <h3 class="font-bold text-lg">Holy Mass & Confession</h3>
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src="service3.jpg"
-            alt="Night Vigil"
-            class="h-48 w-full object-cover"
-          />
+          <img src="service3.jpg" alt="Night Vigil" class="h-48 w-full object-cover" />
           <div class="p-6">
             <h3 class="font-bold text-lg">Night Vigil</h3>
           </div>
@@ -148,13 +87,10 @@
 
       <!-- Ministry Section -->
       <section id="ministry" class="bg-gray-100 py-12 px-6">
-        <h2 class="text-4xl font-extrabold uppercase text-center">
-          Professional Ministry
-        </h2>
+        <h2 class="text-4xl font-extrabold uppercase text-center">Professional Ministry</h2>
         <p class="mt-6 text-gray-600 leading-relaxed max-w-4xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          vehicula, odio ac suscipit tempor, lorem arcu vestibulum ligula, ut
-          tristique augue magna non metus...
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula, odio ac suscipit tempor, lorem arcu vestibulum ligula,
+          ut tristique augue magna non metus...
         </p>
       </section>
 
@@ -162,26 +98,10 @@
       <section id="gallery" class="text-center">
         <h2 class="text-4xl font-extrabold uppercase">Gallery</h2>
         <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <img
-            src="gallery1.jpg"
-            alt="Gallery Image 1"
-            class="w-full h-48 object-cover rounded-lg"
-          />
-          <img
-            src="gallery2.jpg"
-            alt="Gallery Image 2"
-            class="w-full h-48 object-cover rounded-lg"
-          />
-          <img
-            src="gallery3.jpg"
-            alt="Gallery Image 3"
-            class="w-full h-48 object-cover rounded-lg"
-          />
-          <img
-            src="gallery4.jpg"
-            alt="Gallery Image 4"
-            class="w-full h-48 object-cover rounded-lg"
-          />
+          <img src="gallery1.jpg" alt="Gallery Image 1" class="w-full h-48 object-cover rounded-lg" />
+          <img src="gallery2.jpg" alt="Gallery Image 2" class="w-full h-48 object-cover rounded-lg" />
+          <img src="gallery3.jpg" alt="Gallery Image 3" class="w-full h-48 object-cover rounded-lg" />
+          <img src="gallery4.jpg" alt="Gallery Image 4" class="w-full h-48 object-cover rounded-lg" />
         </div>
       </section>
     </main>
